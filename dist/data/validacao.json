@@ -1,0 +1,20 @@
+{
+  "total_ocorrencias": true,
+  "ids_unicos_por_ano": true,
+  "anos_consistentes": true,
+  "vitimas_nao_negativas": true,
+  "totais_anuais_preservados": true,
+  "pareamento_contabilizado": true,
+  "convergencia_logistica": true,
+  "intervalos_coerentes": true,
+  "auc_valida": true,
+  "bootstrap_intervalo_coerente": true,
+  "catalogo_snv": true,
+  "amostra_modelo_contabilizada": true,
+  "arquivos_brutos_sha256": true,
+  "agregacao_painel": true,
+  "total_painel_2022": true,
+  "total_painel_2023": true,
+  "total_painel_2024": true,
+  "total_painel_2025": true
+}

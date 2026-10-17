@@ -1,0 +1,5 @@
+﻿ano,linhas_brutas,ocorrencias,duplicados,ids_conflitantes,mortos,feridos_graves,feridos_leves,sinistros_fatais,sem_vitimas,classificacao_ausente,classificacao_divergente,localizacao_invalida,coordenada_invalida,data_invalida,ano_divergente,contagem_vitimas_divergente
+2022,64606,64606,0,0,5441,18173,54892,4664,11506,1,0,199,0,0,0,3547
+2023,67766,67766,0,0,5627,18958,59505,4858,10963,1,0,160,0,0,0,3767
+2024,73202,73202,0,0,6163,20372,64223,5225,11782,1,0,189,1,0,0,3887
+2025,72529,72529,0,0,6043,20018,63532,5210,11138,1,0,167,0,0,0,3823

@@ -1,0 +1,18 @@
+{
+  "painel-prf-pnct.csv": {
+    "unidade": "segmento-ano elegível PNCT",
+    "ano": "ano-base do desfecho PRF",
+    "uf": "sigla UF",
+    "br": "número da rodovia",
+    "vmda": "soma dos sentidos C e D; veículos/dia modelados",
+    "exposicao": "VMD × extensão estimada × dias do ano; veículos-km",
+    "admin": "classificação do cadastro PNCT, não validação contratual histórica",
+    "n": "sinistros PRF com correspondência única no intervalo",
+    "mortos": "pessoas mortas registradas nas ocorrências associadas",
+    "nao_simulavel": "classificação da estimativa PNCT; usada na sensibilidade"
+  },
+  "catalogo-governanca.csv": {
+    "unidade": "arquivo público ANTT inspecionado",
+    "limite": "inventário de insumos, sem índice validado ou integração temporal institucional"
+  }
+}

@@ -1,0 +1,14 @@
+data/
+.deps/
+__pycache__/
+*.tar.gz
+*.zip
+*.log
+qa/
+
+.vercel/
+.openai/
+github-publicacao.json
+
+!dist/data/
+!dist/data/**

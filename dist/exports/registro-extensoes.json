@@ -1,0 +1,32 @@
+{
+  "versao": "2026-10-17",
+  "regra": "Distinguir executado, identificado e proposto; não atribuir extensões à autora da tese.",
+  "extensoes": [
+    {
+      "item": "Auditoria PRF e integração SNV",
+      "status": "implementado",
+      "evidencia": "scripts/analisar.py; scripts/integrar_snv.py"
+    },
+    {
+      "item": "Exposição PNCT e NB2",
+      "status": "implementado",
+      "evidencia": "scripts/analisar_exposicao.py; dist/data/exposicao.json",
+      "limite": "Exposição modelada; associação não causal"
+    },
+    {
+      "item": "Governança: matriz de dimensões e protocolo",
+      "status": "desenho documentado; coleta institucional não executada",
+      "evidencia": "dist/exports/protocolo-governanca.html"
+    },
+    {
+      "item": "Moderação e mediação",
+      "status": "hipóteses propostas; não estimadas",
+      "evidencia": "dist/exports/protocolo-governanca.html"
+    },
+    {
+      "item": "ANTT atendimento; contratos e DNIT obras",
+      "status": "fontes públicas identificadas; integração histórica pendente",
+      "evidencia": "dist/exports/protocolo-governanca.html"
+    }
+  ]
+}

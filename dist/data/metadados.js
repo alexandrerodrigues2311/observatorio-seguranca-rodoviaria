@@ -1,0 +1,1 @@
+window.METADADOS={"created_at":"2026-10-17T16:06:31.158892+00:00","period":[2022,2025],"n":278103,"pipeline_sha256":"2f77efdaa2793bf9ffb0d84e6dbea52f3e491a97e47a70640dc8c58a7eb53e7a","libraries":{"pandas":"2.3.3","numpy":"2.3.5"},"seed":20261017};

@@ -33,6 +33,17 @@
       "status": "implementado e validado temporalmente",
       "evidencia": "scripts/modelo_multinomial.py; dist/data/multinomial.json; notebook",
       "limite": "Associações entre registros; hipótese IIA; baixa sensibilidade para classificação fatal; sem interpretação causal"
+    },
+    {
+      "item": "Classificação por boosting, regressão Poisson por boosting e agrupamento K-means",
+      "status": "executados; teste temporal, teste em corredores reservados e estabilidade do agrupamento",
+      "evidencia": "scripts/aprendizado_maquina.py; dist/data/aprendizado.json; notebook células 15–16",
+      "limite": "Não identifica governança causal; sensibilidade fatal baixa; grupos incluem desfechos iniciais."
+    },
+    {
+      "item": "Relatório detalhado DOCX e apresentação revisada",
+      "status": "implementados e conferidos",
+      "evidencia": "Relatório em tela e DOCX; 14 slides principais e 2 apêndices; cronograma original preservado."
     }
   ]
 }

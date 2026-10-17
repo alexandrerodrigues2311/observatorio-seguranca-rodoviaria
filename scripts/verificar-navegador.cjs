@@ -10,7 +10,7 @@ const BASE=process.env.PAINEL_URL||'http://127.0.0.1:8773';
  await page.waitForFunction(()=>window.PAINEL_READY===true,{timeout:20000});
  await page.screenshot({path:'qa/panorama.png',fullPage:true});
  const results={title:await page.title(),total:await page.locator('#hero-number').innerText(),tabs:[],checks:{}};
- for(const id of ['teoria','territorio','padroes','exposicao','modelos','auditoria','metodo','laboratorio']){
+ for(const id of ['teoria','territorio','padroes','exposicao','modelos','auditoria','metodo','laboratorio','aprendizado']){
   await page.locator(`[data-page="${id}"]`).click();await page.waitForTimeout(650);
   results.tabs.push({id,active:await page.locator('#'+id).isVisible(),charts:await page.locator('#'+id+' svg').count()});
   await page.screenshot({path:`qa/${id}.png`,fullPage:true});
@@ -31,7 +31,7 @@ const BASE=process.env.PAINEL_URL||'http://127.0.0.1:8773';
  await page.locator('[data-page="exposicao"]').click();await page.selectOption('#expo-year','2024');await page.selectOption('#expo-uf','MG');results.checks.exposureFilter=(await page.locator('#expo-kpis').innerText()).length>30;await page.locator('[data-page="territorio"]').click();await page.selectOption('#map-layer','network');await page.waitForTimeout(600);results.checks.roadTraces=(await page.locator('#map-subtitle').innerText()).includes('SNV');await page.selectOption('#map-layer','admin');await page.waitForTimeout(500);await page.screenshot({path:'qa/rodovias.png',fullPage:true});await page.locator('[data-page="modelos"]').click();await page.waitForFunction(()=>document.querySelector('#modelos').classList.contains('active')&&document.querySelector('#year').disabled);results.checks.fixedFilters=await page.locator('#year').isDisabled();
  await page.setViewportSize({width:390,height:844});await page.locator('[data-page="visao"]').click();await page.waitForTimeout(500);await page.screenshot({path:'qa/mobile.png',fullPage:true});
  results.checks.noMobileOverflow=await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2);
- for(const url of ['exports/relatorio-analitico.html','exports/figura-modelo.svg','exports/diagnostico-snv-202604A.csv','exports/protocolo-governanca.html','exports/catalogo-governanca.csv','exports/registro-extensoes.json','exports/viabilidade-protocolo.json','exports/modelo-multinomial.csv','data/interpretacoes.json']){let r=await page.request.get(BASE+'/'+url);results.checks[url]=r.status()===200}
- results.errors=errors;fs.writeFileSync('qa/browser-results.json',JSON.stringify(results,null,2));console.log(JSON.stringify(results));
+ for(const url of ['exports/relatorio-analitico.html','exports/figura-modelo.svg','exports/diagnostico-snv-202604A.csv','exports/protocolo-governanca.html','exports/catalogo-governanca.csv','exports/registro-extensoes.json','exports/viabilidade-protocolo.json','exports/modelo-multinomial.csv','data/interpretacoes.json','exports/relatorio-extensoes-pesquisa.docx','data/aprendizado.json']){let r=await page.request.get(BASE+'/'+url);results.checks[url]=r.status()===200}
+ await page.locator('[data-page=aprendizado]').click();await page.waitForTimeout(500);results.checks.mlCharts=await page.locator('#aprendizado svg').count()>=3;await page.locator('[data-page=laboratorio]').click();results.checks.readableReport=await page.locator('#laboratorio details').count()>5;results.errors=errors;fs.writeFileSync('qa/browser-results.json',JSON.stringify(results,null,2));console.log(JSON.stringify(results));
  await browser.close();if(errors.length||Object.values(results.checks).some(v=>!v))process.exitCode=1;
 })().catch(e=>{console.error(e);process.exitCode=1});

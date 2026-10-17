@@ -42,11 +42,11 @@ As comparações são observacionais. Concessão cadastral não mede qualidade d
 - `dist/exports/registro-extensoes.json`: distingue implementado, fonte identificada e pesquisa proposta.
 - `dist/data/fontes.json`: manifesto de aquisição.
 
-Arquivos brutos públicos estão na release; o repositório contém derivados e código. Histórico de contratos, disponibilidade operacional e entrevistas ainda não foi reconstruído. Não há mediação estimada nem índice validado de governança. A proposta privada da tese não é publicada; as extensões não são atribuídas à autora.
+Arquivos brutos públicos estão na release; o repositório contém derivados e código. Histórico de contratos e disponibilidade operacional ainda precisam ser reconstruídos. Entrevistas seriam uma extensão opcional; o projeto original utiliza dados públicos e documentos. Não há mediação estimada nem índice validado de governança. A proposta privada da tese não é publicada; as extensões não são atribuídas à autora.
 
 ## Verificação e ativos
 
-Notebook: execução sequencial das quatorze células de código com saídas preservadas. Pipeline: verificações de totais, taxas, cobertura e convergência. Navegador: navegação nas nove áreas, filtros, traçados, CSV/SVG, arquivos e largura móvel. Script `scripts/verificar-navegador.cjs` usa Playwright/Edge quando disponíveis.
+Notebook: execução sequencial das dezesseis células de código com saídas preservadas. Pipeline: verificações de totais, taxas, cobertura e convergência. Navegador: navegação nas dez áreas, filtros, traçados, CSV/SVG, arquivos e largura móvel. Script `scripts/verificar-navegador.cjs` usa Playwright/Edge quando disponíveis.
 
 ECharts é distribuído com seu aviso de licença; pyshp 3.0.3 tem licença MIT em scripts/vendor. Dados mantêm termos das fontes originais. Imagem da abertura gerada por IA, ilustrativa, sem correspondência com um sinistro real; ferramenta image_gen, 17/10/2026. Direção visual: sinistro não gráfico em rodovia brasileira, veículos no acostamento, cones, socorro e cores asfalto/âmbar/vermelho. Não usar como evidência empírica.
 
@@ -60,8 +60,14 @@ A matriz dist/exports/viabilidade-protocolo.json separa o que é testável agora
 
 ## Apresentação e caderno
 
-[Apresentação de 20 minutos](https://observatorio-seguranca-rodoviaria.vercel.app/apresentacao/) com 18 slides, notas, fontes, cronômetro e tela cheia; [PowerPoint editável](https://observatorio-seguranca-rodoviaria.vercel.app/exports/apresentacao-qualificacao-fumec.pptx). Título, autora, orientação e cronograma conferidos no projeto. O cronograma original marca qualificação em nov–dez, enquanto a agenda informada pelo avaliador é 27/out/2026 às 15h; divergência explicitada, sem alteração silenciosa.
+[Apresentação de 20 minutos](https://observatorio-seguranca-rodoviaria.vercel.app/apresentacao/) com 14 slides principais e 2 apêndices, notas, fontes, cronômetro e tela cheia; [PowerPoint editável](https://observatorio-seguranca-rodoviaria.vercel.app/exports/apresentacao-qualificacao-fumec.pptx). Título, autora, orientação e cronograma conferidos no projeto. O cronograma original marca qualificação em nov–dez, enquanto a agenda informada pelo avaliador é 27/out/2026 às 15h; divergência explicitada, sem alteração silenciosa.
 
-O caderno dist/exports/caderno-trabalho-tese.html explicita tese, hipóteses, medidas e viabilidade. O notebook contém 14 células executadas. Publicado como apoio à avaliação, com extensões separadas da proposta original.
+O caderno dist/exports/caderno-trabalho-tese.html explicita tese, hipóteses, medidas e viabilidade. O notebook contém 16 células executadas. Publicado como apoio à avaliação, com extensões separadas da proposta original.
 
 O PowerPoint foi produzido com @oai/artifact-tool do runtime de apresentações; requer esse runtime para reconstrução. O arquivo final inclui objetos editáveis, gráfico com dados incorporados, tabelas e notas de fala. A apresentação web usa HTML/CSS/JavaScript locais e conteúdo estruturado em dist/apresentacao/conteudo.json. Ambos usam o logo fornecido pelo usuário.
+
+## Modelos adicionais e documentação final
+
+Três modelos executados em scripts/aprendizado_maquina.py: classificação da gravidade por boosting, regressão Poisson por boosting com exposição e agrupamento K-means. Seleção em 2023, treino 2022–2023, teste 2024–2025 e validação adicional com corredores reservados. Resultados, interpretações, estabilidade e limitações estão na página Aprendizado e no relatório DOCX. A baixa sensibilidade fatal impede uso operacional do classificador.
+
+Após o pipeline anterior, execute `python scripts/aprendizado_maquina.py` e `python scripts/figuras_ml.py`. `scripts/relatorio_final_docx.py` requer python-docx; gera DOCX e relatório em tela. `scripts/revisar_apresentacao_visual.py` gera as cenas comuns da apresentação web e PowerPoint. O mapa interativo usa projeção equiretangular com escala uniforme; os mapas da apresentação usam Mercator.

@@ -23,6 +23,7 @@ python scripts/integrar_snv.py
 python scripts/geometria_rodovias.py
 python scripts/extrair_planilhas.py
 python scripts/analisar_exposicao.py
+python scripts/modelo_multinomial.py
 python scripts/publicar_resultados.py
 ```
 
@@ -45,6 +46,22 @@ Arquivos brutos públicos estão na release; o repositório contém derivados e 
 
 ## Verificação e ativos
 
-Notebook: execução sequencial das dez células de código com saídas preservadas. Pipeline: verificações de totais, taxas, cobertura e convergência. Navegador: navegação nas nove áreas, filtros, traçados, CSV/SVG, arquivos e largura móvel. Script `scripts/verificar-navegador.cjs` usa Playwright/Edge quando disponíveis.
+Notebook: execução sequencial das quatorze células de código com saídas preservadas. Pipeline: verificações de totais, taxas, cobertura e convergência. Navegador: navegação nas nove áreas, filtros, traçados, CSV/SVG, arquivos e largura móvel. Script `scripts/verificar-navegador.cjs` usa Playwright/Edge quando disponíveis.
 
 ECharts é distribuído com seu aviso de licença; pyshp 3.0.3 tem licença MIT em scripts/vendor. Dados mantêm termos das fontes originais. Imagem da abertura gerada por IA, ilustrativa, sem correspondência com um sinistro real; ferramenta image_gen, 17/10/2026. Direção visual: sinistro não gráfico em rodovia brasileira, veículos no acostamento, cones, socorro e cores asfalto/âmbar/vermelho. Não usar como evidência empírica.
+
+## Atualização de leitura e desfechos
+
+Síntese dos achados na abertura e teoria; filtros da teoria aplicados ao resumo empírico; comentários por gráfico/tabela em dist/data/interpretacoes.json; rótulos permanentes na rosca; eixo redundante retirado da trajetória. Mapas têm nomes de UF, seleção de corredor, zoom e identificação por marcadores.
+
+Modelo multinomial: quatro desfechos de gravidade máxima, referência sem vítimas, covariância por UF–BR, controles e tipos mais frequentes no treino, teste temporal, calibração e sensibilidade sem tipo. A hipótese IIA não foi validada como verdade substantiva. Acurácia quase igual à referência e baixa sensibilidade fatal impedem uso operacional. Coeficientes, métricas e matriz de confusão publicados.
+
+A matriz dist/exports/viabilidade-protocolo.json separa o que é testável agora, parcialmente testável e dependente de nova coleta. As dez melhorias são propostas e estão em dist/exports/dez-melhorias-pesquisa.json. O notebook inclui as extensões e sua interpretação.
+
+## Apresentação e caderno
+
+[Apresentação de 20 minutos](https://observatorio-seguranca-rodoviaria.vercel.app/apresentacao/) com 18 slides, notas, fontes, cronômetro e tela cheia; [PowerPoint editável](https://observatorio-seguranca-rodoviaria.vercel.app/exports/apresentacao-qualificacao-fumec.pptx). Título, autora, orientação e cronograma conferidos no projeto. O cronograma original marca qualificação em nov–dez, enquanto a agenda informada pelo avaliador é 27/out/2026 às 15h; divergência explicitada, sem alteração silenciosa.
+
+O caderno dist/exports/caderno-trabalho-tese.html explicita tese, hipóteses, medidas e viabilidade. O notebook contém 14 células executadas. Publicado como apoio à avaliação, com extensões separadas da proposta original.
+
+O PowerPoint foi produzido com @oai/artifact-tool do runtime de apresentações; requer esse runtime para reconstrução. O arquivo final inclui objetos editáveis, gráfico com dados incorporados, tabelas e notas de fala. A apresentação web usa HTML/CSS/JavaScript locais e conteúdo estruturado em dist/apresentacao/conteudo.json. Ambos usam o logo fornecido pelo usuário.

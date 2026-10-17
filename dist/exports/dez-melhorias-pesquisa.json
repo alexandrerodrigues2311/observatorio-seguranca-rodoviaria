@@ -1,0 +1,62 @@
+[
+  {
+    "prioridade": 1,
+    "melhoria": "Separar ocorrência, registro e resposta",
+    "contribuicao": "Explicitar mecanismos e previsões concorrentes; contagem de sinistros não mede diretamente capacidade de governança.",
+    "status": "proposta de aprofundamento"
+  },
+  {
+    "prioridade": 2,
+    "melhoria": "Reconstruir governança no tempo",
+    "contribuicao": "Vincular contratos, obrigações, aditivos e responsáveis ao trecho e à data de vigência; evitar atribuir cadastro atual ao passado.",
+    "status": "proposta de aprofundamento"
+  },
+  {
+    "prioridade": 3,
+    "melhoria": "Validar equipamentos em operação",
+    "contribuicao": "Distinguir instalado, disponível e funcionando; medir cobertura e interrupções anteriores ao desfecho.",
+    "status": "proposta de aprofundamento"
+  },
+  {
+    "prioridade": 4,
+    "melhoria": "Triangular fontes de sinistros",
+    "contribuicao": "Vincular PRF e operadores e examinar divergências; medir cobertura sem presumir independência entre fontes.",
+    "status": "proposta de aprofundamento"
+  },
+  {
+    "prioridade": 5,
+    "melhoria": "Aprimorar o denominador e sua incerteza",
+    "contribuicao": "Confrontar VMD modelado com contagens observadas, harmonizar janelas e propagar incerteza; manter sensibilidade sem 2025.",
+    "status": "proposta de aprofundamento"
+  },
+  {
+    "prioridade": 6,
+    "melhoria": "Ampliar a série e estabilizar trechos",
+    "contribuicao": "Construir correspondência de segmentos entre versões do SNV; reduzir mudanças artificiais de unidade e aumentar períodos anteriores.",
+    "status": "proposta de aprofundamento"
+  },
+  {
+    "prioridade": 7,
+    "melhoria": "Testar heterogeneidade com hipóteses prévias",
+    "contribuicao": "Usar moderação para perguntas específicas, com taxas ou probabilidades previstas e IC; controlar multiplicidade e suporte comum.",
+    "status": "proposta de aprofundamento"
+  },
+  {
+    "prioridade": 8,
+    "melhoria": "Avaliar intervenções datadas",
+    "contribuicao": "Estudo de evento ou diferenças em diferenças quando houver grupos comparáveis, datas e tendências anteriores plausíveis; considerar adoção escalonada.",
+    "status": "proposta de aprofundamento"
+  },
+  {
+    "prioridade": 9,
+    "melhoria": "Investigar mediação com sequência temporal",
+    "contribuicao": "Observar governança antes da resposta e da mortalidade; explicitar confundimento e sensibilidade. SEM isolado não demonstra mecanismo causal.",
+    "status": "proposta de aprofundamento"
+  },
+  {
+    "prioridade": 10,
+    "melhoria": "Confrontar modelos com estudos de casos",
+    "contribuicao": "Selecionar episódios comparáveis e casos contrários à hipótese; rastrear alerta, decisão, execução e revisão, triangulando documentos e entrevistas.",
+    "status": "proposta de aprofundamento"
+  }
+]

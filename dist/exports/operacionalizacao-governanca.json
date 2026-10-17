@@ -1,0 +1,65 @@
+[
+  {
+    "dimensao": "Responsabilidade e incentivos",
+    "indicador": "Obrigação de informar e meta de segurança",
+    "definicao_operacional": "Presença, definição, periodicidade, responsável e consequência contratual; codificar separadamente, sem somar em índice arbitrário",
+    "unidade": "Contrato/aditivo–trecho–período",
+    "fonte": "Contratos, PER e aditivos ANTT; instrumentos equivalentes DNIT",
+    "situacao": "Documentos públicos identificados; codificação não executada",
+    "condicao_para_teste": "Vigência e aplicabilidade ao trecho; desenho de codificação e revisão independente"
+  },
+  {
+    "dimensao": "Capacidade de observação",
+    "indicador": "SAT, CFTV e radares cadastrados",
+    "definicao_operacional": "Contagem por categoria e situação; densidade por 100 km somente após compatibilizar cadastro e extensão, sem duplicidades",
+    "unidade": "Equipamento–trecho–data da fotografia cadastral",
+    "fonte": "antt-sat-3.csv; antt-cftv-1.csv; antt-radar-2.csv",
+    "situacao": "Arquivos públicos preservados; inventário e contagens cadastrais disponíveis",
+    "condicao_para_teste": "Sem data de início e sem registros preenchidos de inativação; situação atual não comprova operação histórica. ano_do_pnv_snv é referência de malha, não ano de instalação"
+  },
+  {
+    "dimensao": "Implementação",
+    "indicador": "Execução prevista versus realizada",
+    "definicao_operacional": "Comparar previsto_anual e executado_anual somente após confirmar unidade, convenção e versão; nunca assumir que sejam valores monetários",
+    "unidade": "Projeto–planejamento–versão",
+    "fonte": "antt-acompanhamento-anual-0.csv",
+    "situacao": "1.180 linhas válidas; uma linha estruturalmente inválida segregada",
+    "condicao_para_teste": "Planejamento pode ter atualização posterior ao período; normalizar rodovia/km, distinguir versão e evitar vazamento temporal"
+  },
+  {
+    "dimensao": "Entrega",
+    "indicador": "Intervenção concluída e certificação",
+    "definicao_operacional": "Presença de data_de_conclusao, obra_certificada e documento de certificação; vincular ao projeto e trecho",
+    "unidade": "Obra–trecho–data",
+    "fonte": "antt-encerramento-investimentos-0.csv",
+    "situacao": "253 registros com data de conclusão preenchida; ainda sem validação histórica de cada intervenção",
+    "condicao_para_teste": "Conclusão declarada não mede eficácia. Falta confirmar objeto, localização, vínculo, data e situação de segurança antes/depois"
+  },
+  {
+    "dimensao": "Fiscalização",
+    "indicador": "Inspeções e cumprimento de determinações",
+    "definicao_operacional": "Número, objeto, prazo e cumprimento; usar também oportunidade/intensidade de fiscalização como denominador quando apropriado",
+    "unidade": "Determinação–responsável–trecho–período",
+    "fonte": "Relatórios e processos regulatórios ANTT; fiscalização de contratos DNIT",
+    "situacao": "Fontes públicas identificadas; base histórica não integrada",
+    "condicao_para_teste": "Mais autuações pode significar mais fiscalização ou mais descumprimento; não interpretar automaticamente como pior governança"
+  },
+  {
+    "dimensao": "Resposta operacional",
+    "indicador": "Tempo e cobertura de atendimento",
+    "definicao_operacional": "Tempo entre chamado e chegada, tipo de atendimento e cobertura, conforme dicionário; comparar perfis semelhantes",
+    "unidade": "Chamado ou agregação compatível–trecho–período",
+    "fonte": "ANTT atendimento médico e mecânico",
+    "situacao": "Fonte pública identificada; ainda não integrada",
+    "condicao_para_teste": "Média agregada não identifica trajetória individual; controlar gravidade, distância, horário e seleção dos chamados"
+  },
+  {
+    "dimensao": "Coordenação e aprendizagem",
+    "indicador": "Trajetória do alerta até a avaliação",
+    "definicao_operacional": "Datas, responsáveis e evidências de diagnóstico, encaminhamento, decisão, execução, avaliação e revisão",
+    "unidade": "Episódio de risco e resposta",
+    "fonte": "Processos, relatórios, atas, ordens de serviço; entrevistas complementares",
+    "situacao": "Protocolo de coleta proposto; episódios ainda não reconstruídos",
+    "condicao_para_teste": "Documento não localizado é ausência de evidência acessível, não prova de ausência de ação"
+  }
+]

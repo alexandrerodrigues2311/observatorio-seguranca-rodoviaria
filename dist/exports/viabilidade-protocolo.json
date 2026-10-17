@@ -1,0 +1,68 @@
+[
+  {
+    "item": "1. Definir unidades de análise",
+    "situacao": "Testável agora para o componente quantitativo",
+    "o_que_os_dados_permitem": "Ocorrência PRF, intervalo de 10 km e segmento-ano PNCT já definidos; verificar agregações, exclusões e exposição.",
+    "o_que_falta": "Episódio de alerta e resposta institucional exige reconstrução documental."
+  },
+  {
+    "item": "2. Cadastro histórico de responsáveis e equipamentos",
+    "situacao": "Depende de nova integração",
+    "o_que_os_dados_permitem": "Cadastros atuais permitem inventário e comparação cadastral descritiva.",
+    "o_que_falta": "Contratos e aditivos com vigência, mudanças de responsabilidade e disponibilidade real de cada equipamento por período."
+  },
+  {
+    "item": "3. Dicionário e rastreabilidade",
+    "situacao": "Parcialmente implementado",
+    "o_que_os_dados_permitem": "Manifesto, SHA-256, extração, variáveis derivadas e exclusões podem ser auditados agora.",
+    "o_que_falta": "Codificação de governança exige documentos, critérios de evidência, codificadores e revisão de divergências."
+  },
+  {
+    "item": "4. Seleção de casos e episódios comparáveis",
+    "situacao": "Parcialmente testável",
+    "o_que_os_dados_permitem": "Selecionar candidatos por exposição, pista, gravidade e persistência; examinar sensibilidade aos critérios.",
+    "o_que_falta": "Confirmar comparabilidade institucional e selecionar casos contrários à hipótese após coleta dos episódios; entrevistas ainda não realizadas."
+  },
+  {
+    "item": "5. Explicações alternativas e efeitos",
+    "situacao": "Parcialmente testável",
+    "o_que_os_dados_permitem": "Modelos logístico, NB2 e multinomial controlam características disponíveis; validação temporal e sensibilidades estão executadas.",
+    "o_que_falta": "Clima vinculado, fiscalização, atendimento e mudanças de registro requerem integração. Efeito causal exige intervenção datada, comparação e pressupostos verificáveis no desenho."
+  },
+  {
+    "item": "6. Triangulação e entrevistas",
+    "situacao": "Depende de nova coleta",
+    "o_que_os_dados_permitem": "A auditoria compara campos e versões; fontes públicas adicionais foram identificadas.",
+    "o_que_falta": "Vinculação PRF–operador evento a evento, documentos institucionais, entrevistas, consentimento e avaliação ética aplicável."
+  },
+  {
+    "item": "H1. Capacidade informacional melhora registro",
+    "situacao": "Ainda não identificável",
+    "o_que_os_dados_permitem": "É possível descrever completude dos campos PRF e presença cadastral de instrumentos.",
+    "o_que_falta": "Histórico de operação e fonte independente para comparar cobertura; mais sinistros observados não identifica mais detecção."
+  },
+  {
+    "item": "H2. Coordenação acelera resposta",
+    "situacao": "Ainda não testável",
+    "o_que_os_dados_permitem": "O problema e indicadores estão especificados no protocolo.",
+    "o_que_falta": "Datas do alerta, encaminhamento, decisão, recursos e execução; medida validada de coordenação."
+  },
+  {
+    "item": "H3. Resposta reduz recorrência",
+    "situacao": "Persistência testável; efeito não identificado",
+    "o_que_os_dados_permitem": "Correlação entre biênios está calculada e permite selecionar locais persistentes.",
+    "o_que_falta": "Intervenção executada com data/local, grupo comparável, exposição e períodos anteriores; persistência não demonstra inação."
+  },
+  {
+    "item": "Moderação institucional",
+    "situacao": "Depende de integração histórica",
+    "o_que_os_dados_permitem": "Interações entre pista, horário e outras variáveis disponíveis podem testar heterogeneidade observacional se especificadas.",
+    "o_que_falta": "Para G×capacidade: medir governança e capacidade contemporâneas antes do resultado. Não substituir qualidade de governança pelo rótulo concessão."
+  },
+  {
+    "item": "Mediação institucional",
+    "situacao": "Ainda não identificável",
+    "o_que_os_dados_permitem": "A sequência teórica está explicitada, sem modelo causal estimado.",
+    "o_que_falta": "Governança em t−1, resposta em t, resultado em t+1, medidas consistentes e pressupostos de confundimento, com sensibilidade."
+  }
+]

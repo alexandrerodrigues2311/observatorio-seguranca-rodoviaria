@@ -1,0 +1,78 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Caderno de trabalho — tese e desenho executável</title><style>body{max-width:1180px;margin:40px auto;padding:22px;font:17px/1.65 system-ui;color:#302b29}table{border-collapse:collapse;width:100%}td,th{padding:14px;border:1px solid #ddd;vertical-align:top}article{margin-bottom:35px}.table-wrap{overflow:auto}a{color:#973c32}.thesis-main{font-size:23px;background:#f3e9df;padding:20px}</style><h1>Caderno de trabalho: governança, informação e segurança rodoviária</h1><p>Edição de 17/10/2026. Documento de apoio à avaliação e ao aprimoramento do projeto; não substitui a autoria acadêmica da proposta.</p><article class="card thesis-statement"><span class="figure">TESE A DEMONSTRAR · FORMULAÇÃO PARA DISCUSSÃO</span><h2>Qual é a tese deste trabalho?</h2><p class="thesis-main"><strong>Os arranjos de governança das rodovias influenciam a capacidade de produzir informação sobre os sinistros e de transformar o conhecimento dos riscos em respostas efetivas.</strong></p><p>A proposição distingue três processos: ocorrência real, observação/registro e resposta institucional. Uma comparação entre administrações só poderá explicar governança se medir os mecanismos que conectam esses processos.</p><h3>Hipóteses e contribuição pretendida</h3><ol><li><b>Informação:</b> obrigações e capacidade operacional se associam à completude e à concordância dos registros; testar exige histórico de instrumentos e fonte independente.</li><li><b>Resposta:</b> coordenação, recursos e responsabilidades definidos se associam a respostas mais rápidas e verificáveis após um alerta.</li><li><b>Resultados:</b> intervenções executadas e avaliadas podem alterar a recorrência de danos; testar exige exposição, temporalidade e comparação adequada.</li></ol><p><b>Contribuição teórica pretendida:</b> explicar quando e como a arquitetura institucional modifica a mensuração do desempenho e a passagem da informação à ação. Uma nova denominação conceitual, isoladamente, não estabelece originalidade.</p><p><b>O que já foi demonstrado:</b> padrões e associações de registros, exposição modelada, persistência e sensibilidade das comparações. <b>O que ainda não foi demonstrado:</b> efeito causal da governança, probabilidade de detecção de eventos ocultos e mecanismo de coordenação/resposta.</p><p class="footnote">Síntese interpretativa e proposta de aprimoramento elaboradas para avaliação do projeto. A redação deve ser validada pela autora e orientação; não é apresentada como transcrição da proposta original.</p></article><article class="card"><span class="figure">DA TEORIA À VARIÁVEL</span><h2>Como a governança será observada</h2><p>Indicadores específicos substituem o uso automático de “concessão” como sinônimo de boa governança. Não há índice composto validado nesta edição.</p><div class="table-wrap"><table><thead><tr><th>Dimensão / indicador</th><th>Definição operacional</th><th>Unidade e fonte</th><th>Situação e condição de teste</th></tr></thead><tbody><tr><td><b>Responsabilidade e incentivos</b><br>Obrigação de informar e meta de segurança</td><td>Presença, definição, periodicidade, responsável e consequência contratual; codificar separadamente, sem somar em índice arbitrário</td><td>Contrato/aditivo–trecho–período<br>Contratos, PER e aditivos ANTT; instrumentos equivalentes DNIT</td><td>Documentos públicos identificados; codificação não executada<br><small>Vigência e aplicabilidade ao trecho; desenho de codificação e revisão independente</small></td></tr><tr><td><b>Capacidade de observação</b><br>SAT, CFTV e radares cadastrados</td><td>Contagem por categoria e situação; densidade por 100 km somente após compatibilizar cadastro e extensão, sem duplicidades</td><td>Equipamento–trecho–data da fotografia cadastral<br>antt-sat-3.csv; antt-cftv-1.csv; antt-radar-2.csv</td><td>Arquivos públicos preservados; inventário e contagens cadastrais disponíveis<br><small>Sem data de início e sem registros preenchidos de inativação; situação atual não comprova operação histórica. ano_do_pnv_snv é referência de malha, não ano de instalação</small></td></tr><tr><td><b>Implementação</b><br>Execução prevista versus realizada</td><td>Comparar previsto_anual e executado_anual somente após confirmar unidade, convenção e versão; nunca assumir que sejam valores monetários</td><td>Projeto–planejamento–versão<br>antt-acompanhamento-anual-0.csv</td><td>1.180 linhas válidas; uma linha estruturalmente inválida segregada<br><small>Planejamento pode ter atualização posterior ao período; normalizar rodovia/km, distinguir versão e evitar vazamento temporal</small></td></tr><tr><td><b>Entrega</b><br>Intervenção concluída e certificação</td><td>Presença de data_de_conclusao, obra_certificada e documento de certificação; vincular ao projeto e trecho</td><td>Obra–trecho–data<br>antt-encerramento-investimentos-0.csv</td><td>253 registros com data de conclusão preenchida; ainda sem validação histórica de cada intervenção<br><small>Conclusão declarada não mede eficácia. Falta confirmar objeto, localização, vínculo, data e situação de segurança antes/depois</small></td></tr><tr><td><b>Fiscalização</b><br>Inspeções e cumprimento de determinações</td><td>Número, objeto, prazo e cumprimento; usar também oportunidade/intensidade de fiscalização como denominador quando apropriado</td><td>Determinação–responsável–trecho–período<br>Relatórios e processos regulatórios ANTT; fiscalização de contratos DNIT</td><td>Fontes públicas identificadas; base histórica não integrada<br><small>Mais autuações pode significar mais fiscalização ou mais descumprimento; não interpretar automaticamente como pior governança</small></td></tr><tr><td><b>Resposta operacional</b><br>Tempo e cobertura de atendimento</td><td>Tempo entre chamado e chegada, tipo de atendimento e cobertura, conforme dicionário; comparar perfis semelhantes</td><td>Chamado ou agregação compatível–trecho–período<br>ANTT atendimento médico e mecânico</td><td>Fonte pública identificada; ainda não integrada<br><small>Média agregada não identifica trajetória individual; controlar gravidade, distância, horário e seleção dos chamados</small></td></tr><tr><td><b>Coordenação e aprendizagem</b><br>Trajetória do alerta até a avaliação</td><td>Datas, responsáveis e evidências de diagnóstico, encaminhamento, decisão, execução, avaliação e revisão</td><td>Episódio de risco e resposta<br>Processos, relatórios, atas, ordens de serviço; entrevistas complementares</td><td>Protocolo de coleta proposto; episódios ainda não reconstruídos<br><small>Documento não localizado é ausência de evidência acessível, não prova de ausência de ação</small></td></tr></tbody></table></div><div class="chart-commentary"><b>O que esta operacionalização acrescenta</b><p>Transforma a tese em perguntas mensuráveis e explicita os limites das fontes. As contagens cadastrais medem registros de instrumentos, sem atribuir operação passada ou qualidade institucional.</p></div><p><a href="operacionalizacao-governanca.csv" download>↓ Matriz de indicadores</a> · <a href="equipamentos-governanca-cadastro.csv" download>↓ Contagens cadastrais por concessionária, UF e situação</a> · <a href="caderno-trabalho-tese.html" target="_blank">Abrir caderno de trabalho consolidado ↗</a></p></article><h2>Viabilidade do desenho</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>item</th>
+      <th>situacao</th>
+      <th>o_que_os_dados_permitem</th>
+      <th>o_que_falta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1. Definir unidades de análise</td>
+      <td>Testável agora para o componente quantitativo</td>
+      <td>Ocorrência PRF, intervalo de 10 km e segmento-ano PNCT já definidos; verificar agregações, exclusões e exposição.</td>
+      <td>Episódio de alerta e resposta institucional exige reconstrução documental.</td>
+    </tr>
+    <tr>
+      <td>2. Cadastro histórico de responsáveis e equipamentos</td>
+      <td>Depende de nova integração</td>
+      <td>Cadastros atuais permitem inventário e comparação cadastral descritiva.</td>
+      <td>Contratos e aditivos com vigência, mudanças de responsabilidade e disponibilidade real de cada equipamento por período.</td>
+    </tr>
+    <tr>
+      <td>3. Dicionário e rastreabilidade</td>
+      <td>Parcialmente implementado</td>
+      <td>Manifesto, SHA-256, extração, variáveis derivadas e exclusões podem ser auditados agora.</td>
+      <td>Codificação de governança exige documentos, critérios de evidência, codificadores e revisão de divergências.</td>
+    </tr>
+    <tr>
+      <td>4. Seleção de casos e episódios comparáveis</td>
+      <td>Parcialmente testável</td>
+      <td>Selecionar candidatos por exposição, pista, gravidade e persistência; examinar sensibilidade aos critérios.</td>
+      <td>Confirmar comparabilidade institucional e selecionar casos contrários à hipótese após coleta dos episódios; entrevistas ainda não realizadas.</td>
+    </tr>
+    <tr>
+      <td>5. Explicações alternativas e efeitos</td>
+      <td>Parcialmente testável</td>
+      <td>Modelos logístico, NB2 e multinomial controlam características disponíveis; validação temporal e sensibilidades estão executadas.</td>
+      <td>Clima vinculado, fiscalização, atendimento e mudanças de registro requerem integração. Efeito causal exige intervenção datada, comparação e pressupostos verificáveis no desenho.</td>
+    </tr>
+    <tr>
+      <td>6. Triangulação e entrevistas</td>
+      <td>Depende de nova coleta</td>
+      <td>A auditoria compara campos e versões; fontes públicas adicionais foram identificadas.</td>
+      <td>Vinculação PRF–operador evento a evento, documentos institucionais, entrevistas, consentimento e avaliação ética aplicável.</td>
+    </tr>
+    <tr>
+      <td>H1. Capacidade informacional melhora registro</td>
+      <td>Ainda não identificável</td>
+      <td>É possível descrever completude dos campos PRF e presença cadastral de instrumentos.</td>
+      <td>Histórico de operação e fonte independente para comparar cobertura; mais sinistros observados não identifica mais detecção.</td>
+    </tr>
+    <tr>
+      <td>H2. Coordenação acelera resposta</td>
+      <td>Ainda não testável</td>
+      <td>O problema e indicadores estão especificados no protocolo.</td>
+      <td>Datas do alerta, encaminhamento, decisão, recursos e execução; medida validada de coordenação.</td>
+    </tr>
+    <tr>
+      <td>H3. Resposta reduz recorrência</td>
+      <td>Persistência testável; efeito não identificado</td>
+      <td>Correlação entre biênios está calculada e permite selecionar locais persistentes.</td>
+      <td>Intervenção executada com data/local, grupo comparável, exposição e períodos anteriores; persistência não demonstra inação.</td>
+    </tr>
+    <tr>
+      <td>Moderação institucional</td>
+      <td>Depende de integração histórica</td>
+      <td>Interações entre pista, horário e outras variáveis disponíveis podem testar heterogeneidade observacional se especificadas.</td>
+      <td>Para G×capacidade: medir governança e capacidade contemporâneas antes do resultado. Não substituir qualidade de governança pelo rótulo concessão.</td>
+    </tr>
+    <tr>
+      <td>Mediação institucional</td>
+      <td>Ainda não identificável</td>
+      <td>A sequência teórica está explicitada, sem modelo causal estimado.</td>
+      <td>Governança em t−1, resposta em t, resultado em t+1, medidas consistentes e pressupostos de confundimento, com sensibilidade.</td>
+    </tr>
+  </tbody>
+</table><h2>Como reproduzir as análises</h2><p><a href="https://colab.research.google.com/github/alexandrerodrigues2311/observatorio-seguranca-rodoviaria/blob/main/notebooks/seguranca_rodoviaria.ipynb">Abrir notebook completo no Colab</a>. Código e saídas documentam auditoria, integração, regressão logística, NB2, multinomial, sensibilidades e validação. Cálculos associacionais não confirmam automaticamente as hipóteses institucionais.</p><h2>Dez melhorias propostas</h2><ol><li><b>Separar ocorrência, registro e resposta</b><p>Explicitar mecanismos e previsões concorrentes; contagem de sinistros não mede diretamente capacidade de governança.</p></li><li><b>Reconstruir governança no tempo</b><p>Vincular contratos, obrigações, aditivos e responsáveis ao trecho e à data de vigência; evitar atribuir cadastro atual ao passado.</p></li><li><b>Validar equipamentos em operação</b><p>Distinguir instalado, disponível e funcionando; medir cobertura e interrupções anteriores ao desfecho.</p></li><li><b>Triangular fontes de sinistros</b><p>Vincular PRF e operadores e examinar divergências; medir cobertura sem presumir independência entre fontes.</p></li><li><b>Aprimorar o denominador e sua incerteza</b><p>Confrontar VMD modelado com contagens observadas, harmonizar janelas e propagar incerteza; manter sensibilidade sem 2025.</p></li><li><b>Ampliar a série e estabilizar trechos</b><p>Construir correspondência de segmentos entre versões do SNV; reduzir mudanças artificiais de unidade e aumentar períodos anteriores.</p></li><li><b>Testar heterogeneidade com hipóteses prévias</b><p>Usar moderação para perguntas específicas, com taxas ou probabilidades previstas e IC; controlar multiplicidade e suporte comum.</p></li><li><b>Avaliar intervenções datadas</b><p>Estudo de evento ou diferenças em diferenças quando houver grupos comparáveis, datas e tendências anteriores plausíveis; considerar adoção escalonada.</p></li><li><b>Investigar mediação com sequência temporal</b><p>Observar governança antes da resposta e da mortalidade; explicitar confundimento e sensibilidade. SEM isolado não demonstra mecanismo causal.</p></li><li><b>Confrontar modelos com estudos de casos</b><p>Selecionar episódios comparáveis e casos contrários à hipótese; rastrear alerta, decisão, execução e revisão, triangulando documentos e entrevistas.</p></li></ol></html>

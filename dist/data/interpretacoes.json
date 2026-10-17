@@ -1,0 +1,122 @@
+{
+  "trend": [
+    "Evolução dos registros",
+    "As colunas mostram contagens por ano no recorte. Os rótulos permitem a leitura direta, sem repetir uma escala vertical.",
+    "Mudanças podem refletir tráfego, risco e registro. Uma coluna isolada é apresentada como indicador, não como comparação temporal."
+  ],
+  "ranking": [
+    "Concentração, não risco",
+    "Os comprimentos comparam mortes registradas entre as UFs selecionadas. Clique em uma UF para explorar seus registros.",
+    "UF maior ou com mais circulação pode acumular mais mortes. Este ranking não identifica as vias mais perigosas por veículo-km."
+  ],
+  "severity-chart": [
+    "Composição do desfecho",
+    "Valores e percentuais mostram como os sinistros registrados se distribuem entre as categorias de gravidade; o denominador é o total do recorte.",
+    "Mortes são pessoas; a categoria fatal conta sinistros com morte. As duas medidas não são intercambiáveis."
+  ],
+  "monthly": [
+    "Quando os registros se concentram",
+    "Cada linha mostra contagens mensais em um ano. Picos são pontos de partida para examinar calendário, tráfego e contexto.",
+    "Não há ajuste por número de viagens, dias do mês ou condições meteorológicas neste gráfico."
+  ],
+  "map": [
+    "Localização e identificação",
+    "Os nomes de UF, o seletor de corredor e os marcadores ajudam a localizar segmentos; o zoom acompanha a UF ou BR selecionada.",
+    "O SNV cartográfico é de 2026. Cor de administração é cadastral, não qualidade de governança ou regime histórico verificado."
+  ],
+  "heatmap": [
+    "Horários com mais registros",
+    "Células mais escuras acumulam mais sinistros naquele dia da semana e horário no recorte.",
+    "Sem circulação por faixa horária, não se conclui que uma hora seja mais arriscada por viagem."
+  ],
+  "pista-chart": [
+    "Proporção fatal bruta",
+    "O ponto mostra sinistros fatais por 100 sinistros registrados naquele tipo de pista; a linha é o IC de Wilson de 95%.",
+    "Diferenças de composição, tráfego e registro permanecem. ICs descritivos não corrigem dependência espacial ou confundimento."
+  ],
+  "network": [
+    "Frequências conjuntas",
+    "A largura do fluxo conta ocorrências que compartilham pista, tipo e gravidade. Ajuda a localizar combinações frequentes.",
+    "As setas organizam a leitura: não demonstram uma sequência causal. O modelo multinomial abaixo acrescenta controles observáveis."
+  ],
+  "forest": [
+    "Associações ajustadas",
+    "OR acima de 1 indica maiores chances de um sinistro registrado ser fatal, condicionadas aos controles. IC que atravessa 1 é compatível com ausência de associação nessa escala.",
+    "OR não é risco por viagem nem efeito causal. Chuva com OR menor não implica que chuva proteja usuários."
+  ],
+  "calibration": [
+    "Qualidade das probabilidades",
+    "Compara probabilidades previstas com proporções observadas no teste 2024–2025. Aproximação à diagonal indica melhor calibração.",
+    "Calibração e discriminação são aspectos diferentes. Validação temporal de registros não demonstra detecção de eventos não registrados."
+  ],
+  "persistence": [
+    "Recorrência territorial",
+    "A associação entre mortes nos dois biênios indica que parte da concentração territorial persiste. Pode orientar seleção de casos para investigar respostas.",
+    "O universo exige registro em algum ano do período. Persistência não prova que não houve intervenção nem que o PDCA falhou."
+  ],
+  "match-chart": [
+    "Cobertura da vinculação",
+    "A linha mede a parcela das ocorrências com correspondência única por UF, BR e km no SNV de referência.",
+    "Correspondência cadastral não certifica precisão do local, regime histórico ou representatividade dos registros não vinculados."
+  ],
+  "zeros": [
+    "Ausência de registro associado",
+    "As barras mostram segmentos elegíveis do cadastro sem ocorrência PRF vinculada no ano indicado.",
+    "Zero pode refletir ausência de sinistro, baixo tráfego, incompatibilidade cadastral ou registro incompleto. Não identifica sub-registro."
+  ],
+  "traffic": [
+    "Movimento em praças de pedágio",
+    "As linhas mostram passagens mensais agregadas nas praças da concessionária, conforme cobertura dos arquivos.",
+    "Uma viagem pode passar por várias praças. Esses volumes não são veículos únicos nem VMD de cada segmento e não compõem o offset PNCT."
+  ],
+  "expo-counts": [
+    "Quantidade de perdas registradas",
+    "Mostra o total de mortes ou sinistros nos segmentos PNCT vinculados, segundo a classificação administrativa do cadastro.",
+    "Contagens não equalizam exposição. Leia junto com a taxa e a cobertura da vinculação."
+  ],
+  "expo-rates": [
+    "Perdas em relação ao tráfego estimado",
+    "Taxa = desfecho registrado ÷ veículos-km modelados × 100 milhões. O denominador melhora a comparabilidade no universo integrado.",
+    "Taxa bruta não controla todas as diferenças entre vias; VMD é modelado e 2025 usa janela móvel de 12 meses."
+  ],
+  "nb-forest": [
+    "Associação ajustada de contagens",
+    "IRR compara a taxa esperada no modelo NB2, com offset de exposição e os controles especificados. O valor 1 representa ausência de associação nessa escala.",
+    "A associação para mortes é sensível à exclusão de não simuláveis. A administração cadastral não mede qualidade da governança."
+  ],
+  "nb-sensitivity": [
+    "Quanto a conclusão depende do recorte",
+    "Compara a associação de concessão com mortes após excluir 2025 ou segmentos classificados como não simuláveis.",
+    "Quando o IC inclui 1, os dados e o modelo são compatíveis com ausência de associação nessa escala. Não é prova de igualdade."
+  ],
+  "expo-coverage": [
+    "Universo efetivamente comparável",
+    "O denominador da cobertura é o total PRF de cada ano; o numerador contém apenas ocorrências associadas de forma única aos segmentos elegíveis.",
+    "As taxas PNCT não representam automaticamente os registros excluídos. Diferenças de cobertura entre anos exigem cautela."
+  ],
+  "segments": [
+    "Exploração dos intervalos",
+    "Cada linha reúne um intervalo UF–BR de 10 km presente no recorte. A proporção fatal usa sinistros registrados como denominador.",
+    "Contagem alta pode refletir tráfego. A tabela não é um ranking de risco por viagem nem diagnóstico de responsabilidade institucional."
+  ],
+  "multi-terms": [
+    "Desfechos distintos, associações distintas",
+    "Cada RRR compara P(desfecho)/P(sem vítimas) entre categorias de um fator, com os demais controles no modelo.",
+    "Não confundir RRR com risco relativo marginal. A referência sem vítimas pode ter cobertura diferente; multinomial logit pressupõe estrutura de odds entre alternativas (IIA), não validada como verdade substantiva."
+  ],
+  "sensitivity": [
+    "Teste de uma exclusão específica",
+    "Compara associações do modelo logístico antes e após retirar casos com classificação textual original ausente.",
+    "Essa verificação cobre apenas uma escolha. Estabilidade aqui não elimina confundimento, erro de exposição ou viés de registro."
+  ],
+  "quality-table": [
+    "Problemas detectados na fonte",
+    "Cada verificação conta ocorrências que atendem à regra de auditoria daquele ano. Um registro pode aparecer em mais de uma linha.",
+    "Divergência aritmética é sinal para investigação, sem correção automática; as linhas não devem ser somadas como casos exclusivos."
+  ],
+  "inventory": [
+    "Arquivos e capacidade de uso",
+    "Mostra linhas legíveis, cobertura institucional e campos de data nos arquivos ANTT inspecionados. Linhas estruturalmente inválidas são identificadas.",
+    "Inventário disponível não significa integração histórica executada nem equipamento funcionando no período analisado."
+  ]
+}

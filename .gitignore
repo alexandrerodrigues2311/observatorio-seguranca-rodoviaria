@@ -12,3 +12,5 @@ github-publicacao.json
 
 !dist/data/
 !dist/data/**
+
+.presentation-build/

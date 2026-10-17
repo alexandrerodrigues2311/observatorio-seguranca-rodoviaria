@@ -77,5 +77,10 @@ for outcome,m in ex['models'].items():
  nbsection+='<h3>'+('Mortes' if outcome=='mortos' else 'Sinistros')+'</h3>'+table(pd.DataFrame(m['terms']).query("term in ['concessao','dupla','log_vmda','pesados_10pp','nao_simulavel']"))
 nbsection+='<p>A associação para mortes perde evidência estatística na análise sem segmentos não simuláveis. A comparação bruta e a ajustada podem ter sentidos diferentes; não há identificação causal de qualidade da governança.</p><h3>Validação temporal NB2</h3>'+table(pd.DataFrame([ex['validation']]))
 report=report.replace('<h2>Limitações e requisitos de aprofundamento</h2>',nbsection+'<h2>Limitações e requisitos de aprofundamento</h2>')
+if (R/'dist/data/multinomial.json').exists():
+ mm=json.loads((R/'dist/data/multinomial.json').read_text(encoding='utf8'));vv=mm['validation']
+ section='<h2>Extensão: quatro desfechos de gravidade</h2><p>Modelo multinomial com referência sem vítimas, UF e ano, características observadas e seis tipos mais frequentes escolhidos no treino. RRR não é risco relativo marginal. Incerteza agrupada por UF–BR; hipótese IIA e seleção de registros permanecem limitações.</p>'+table(pd.DataFrame(mm['terms']).query("term in ['noite','urbano','dupla','multipla','chuva','fim_semana']"))
+ section+='<p>Teste temporal: log loss '+str(round(vv['log_loss'],4))+' contra '+str(round(vv['baseline_log_loss'],4))+' da referência. Acurácia '+str(round(vv['accuracy']*100,2))+'% contra '+str(round(vv['baseline_accuracy']*100,2))+'%. Baixa sensibilidade fatal; não adequado a decisão operacional.</p><p>A tabela identifica associações de cada categoria versus sem vítimas, sem demonstrar causas. Veja coeficientes completos, calibração e sensibilidade no notebook.</p>'
+ report=report.replace('<h2>Reprodução e fontes</h2>',section+'<h2>Reprodução e fontes</h2>')
 (EXP/'relatorio-analitico.html').write_text(report,encoding='utf8')
 print('VALIDAÇÃO',json.dumps(checks,ensure_ascii=False),flush=True)

@@ -27,6 +27,12 @@
       "item": "ANTT atendimento; contratos e DNIT obras",
       "status": "fontes públicas identificadas; integração histórica pendente",
       "evidencia": "dist/exports/protocolo-governanca.html"
+    },
+    {
+      "item": "Modelo multinomial de quatro categorias de gravidade",
+      "status": "implementado e validado temporalmente",
+      "evidencia": "scripts/modelo_multinomial.py; dist/data/multinomial.json; notebook",
+      "limite": "Associações entre registros; hipótese IIA; baixa sensibilidade para classificação fatal; sem interpretação causal"
     }
   ]
 }

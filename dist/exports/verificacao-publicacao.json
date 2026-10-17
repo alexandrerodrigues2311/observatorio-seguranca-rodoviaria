@@ -44,6 +44,16 @@
     }
   ],
   "checks": {
+    "theoryFiltersEnabled": true,
+    "theoryContext": true,
+    "openingInsights": true,
+    "donutVisibleNumbers": true,
+    "trendNoRedundantAxis": true,
+    "multinomialTable": true,
+    "chartComments": true,
+    "corridorZoom": true,
+    "stateLabels": true,
+    "mapTooltip": true,
     "filterWorking": true,
     "csvExport": true,
     "svgExport": true,
@@ -56,12 +66,26 @@
     "exports/diagnostico-snv-202604A.csv": true,
     "exports/protocolo-governanca.html": true,
     "exports/catalogo-governanca.csv": true,
-    "exports/registro-extensoes.json": true
+    "exports/registro-extensoes.json": true,
+    "exports/viabilidade-protocolo.json": true,
+    "exports/modelo-multinomial.csv": true,
+    "data/interpretacoes.json": true
   },
-  "filtered": "2024 · MG · 9.306 ocorrências",
+  "filtered": "2024 · MG · BR-040 · 1.790 ocorrências",
   "tableSearch": "82 intervalos · página 1 de 6",
   "errors": [],
-  "url": "https://observatorio-seguranca-rodoviaria.vercel.app/",
-  "notebook": "10 células de código executadas integralmente no ambiente local; arquivo público com saídas preservadas",
-  "pipeline": "18 verificações de consistência aprovadas"
+  "notebook": "14 células de código executadas; novos modelos, governança e viabilidade incluídos",
+  "apresentacao": {
+    "errors": [],
+    "issues": [],
+    "notes": true,
+    "fullscreen": true,
+    "pptx": 200
+  },
+  "powerpoint": {
+    "slides": 18,
+    "duracao_segundos": 1200,
+    "notas": 18,
+    "validacao": "estrutura, diagramação, fonte, gráfico nativo com dados e reimportação aprovados; não inspecionado no aplicativo PowerPoint"
+  }
 }

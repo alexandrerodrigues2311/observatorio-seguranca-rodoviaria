@@ -617,4 +617,180 @@
     </tr>
   </tbody>
 </table><h2>Limitações e requisitos de aprofundamento</h2><ul><li>A integração PNCT acrescenta taxas sobre exposição modelada nos dois arranjos; a incerteza do VMD não está incorporada aos intervalos. Consulte a seção Exposição e os coeficientes NB2.</li><li>Sem histórico validado de equipamentos e administração: não se testa efeito da visibilidade ou da concessão.</li><li>Cadastro atual pode introduzir incompatibilidade temporal.</li><li>Correlação espacial entre rodovias distintas e fatores não observados podem permanecer.</li><li>ICs descritivos de Wilson não incorporam dependência espacial.</li><li>Bootstrap mede incerteza dentro do universo observado, sem corrigir seleção.</li><li>Ausência de registro de intervenção não foi usada como evidência de inação.</li></ul>
-<h2>Reprodução e fontes</h2><p>Scripts coletar.py, analisar.py, integrar_snv.py e publicar_resultados.py; pandas, NumPy, SciPy, Matplotlib e pyshp. SHA-256 dos arquivos no manifesto. Datas, exclusões e testes preservados. A versão do script principal está identificada nos metadados.</p><p><a href="https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf">PRF</a> · <a href="https://www.gov.br/dnit/pt-br/assuntos/atlas-e-mapas/pnv-e-snv">SNV/DNIT</a> · <a href="https://dados.antt.gov.br/">ANTT</a> · <a href="https://servicodados.ibge.gov.br/api/docs/malhas?versao=3">IBGE</a></p></html>
+<h2>Extensão: quatro desfechos de gravidade</h2><p>Modelo multinomial com referência sem vítimas, UF e ano, características observadas e seis tipos mais frequentes escolhidos no treino. RRR não é risco relativo marginal. Incerteza agrupada por UF–BR; hipótese IIA e seleção de registros permanecem limitações.</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>outcome</th>
+      <th>term</th>
+      <th>beta</th>
+      <th>se</th>
+      <th>rrr</th>
+      <th>low</th>
+      <th>high</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Somente feridos leves</td>
+      <td>noite</td>
+      <td>-0.4367</td>
+      <td>0.0268</td>
+      <td>0.6462</td>
+      <td>0.6130</td>
+      <td>0.6812</td>
+    </tr>
+    <tr>
+      <td>Somente feridos leves</td>
+      <td>urbano</td>
+      <td>0.1348</td>
+      <td>0.0183</td>
+      <td>1.1443</td>
+      <td>1.1038</td>
+      <td>1.1863</td>
+    </tr>
+    <tr>
+      <td>Somente feridos leves</td>
+      <td>dupla</td>
+      <td>0.0279</td>
+      <td>0.0232</td>
+      <td>1.0283</td>
+      <td>0.9824</td>
+      <td>1.0764</td>
+    </tr>
+    <tr>
+      <td>Somente feridos leves</td>
+      <td>multipla</td>
+      <td>0.0938</td>
+      <td>0.0355</td>
+      <td>1.0983</td>
+      <td>1.0242</td>
+      <td>1.1778</td>
+    </tr>
+    <tr>
+      <td>Somente feridos leves</td>
+      <td>chuva</td>
+      <td>0.0934</td>
+      <td>0.0292</td>
+      <td>1.0979</td>
+      <td>1.0366</td>
+      <td>1.1629</td>
+    </tr>
+    <tr>
+      <td>Somente feridos leves</td>
+      <td>fim_semana</td>
+      <td>-0.2546</td>
+      <td>0.0230</td>
+      <td>0.7752</td>
+      <td>0.7409</td>
+      <td>0.8111</td>
+    </tr>
+    <tr>
+      <td>Com feridos graves, sem mortes</td>
+      <td>noite</td>
+      <td>-0.1731</td>
+      <td>0.0255</td>
+      <td>0.8410</td>
+      <td>0.7999</td>
+      <td>0.8843</td>
+    </tr>
+    <tr>
+      <td>Com feridos graves, sem mortes</td>
+      <td>urbano</td>
+      <td>0.1288</td>
+      <td>0.0215</td>
+      <td>1.1374</td>
+      <td>1.0902</td>
+      <td>1.1868</td>
+    </tr>
+    <tr>
+      <td>Com feridos graves, sem mortes</td>
+      <td>dupla</td>
+      <td>-0.2393</td>
+      <td>0.0410</td>
+      <td>0.7871</td>
+      <td>0.7261</td>
+      <td>0.8533</td>
+    </tr>
+    <tr>
+      <td>Com feridos graves, sem mortes</td>
+      <td>multipla</td>
+      <td>-0.2357</td>
+      <td>0.0499</td>
+      <td>0.7900</td>
+      <td>0.7160</td>
+      <td>0.8716</td>
+    </tr>
+    <tr>
+      <td>Com feridos graves, sem mortes</td>
+      <td>chuva</td>
+      <td>-0.1047</td>
+      <td>0.0298</td>
+      <td>0.9006</td>
+      <td>0.8492</td>
+      <td>0.9551</td>
+    </tr>
+    <tr>
+      <td>Com feridos graves, sem mortes</td>
+      <td>fim_semana</td>
+      <td>-0.1129</td>
+      <td>0.0253</td>
+      <td>0.8932</td>
+      <td>0.8499</td>
+      <td>0.9388</td>
+    </tr>
+    <tr>
+      <td>Com mortes</td>
+      <td>noite</td>
+      <td>0.2623</td>
+      <td>0.0347</td>
+      <td>1.2999</td>
+      <td>1.2140</td>
+      <td>1.3918</td>
+    </tr>
+    <tr>
+      <td>Com mortes</td>
+      <td>urbano</td>
+      <td>-0.4280</td>
+      <td>0.0400</td>
+      <td>0.6518</td>
+      <td>0.6024</td>
+      <td>0.7053</td>
+    </tr>
+    <tr>
+      <td>Com mortes</td>
+      <td>dupla</td>
+      <td>-0.5066</td>
+      <td>0.0489</td>
+      <td>0.6025</td>
+      <td>0.5472</td>
+      <td>0.6634</td>
+    </tr>
+    <tr>
+      <td>Com mortes</td>
+      <td>multipla</td>
+      <td>-0.3145</td>
+      <td>0.1333</td>
+      <td>0.7302</td>
+      <td>0.5616</td>
+      <td>0.9494</td>
+    </tr>
+    <tr>
+      <td>Com mortes</td>
+      <td>chuva</td>
+      <td>-0.1247</td>
+      <td>0.0356</td>
+      <td>0.8828</td>
+      <td>0.8230</td>
+      <td>0.9470</td>
+    </tr>
+    <tr>
+      <td>Com mortes</td>
+      <td>fim_semana</td>
+      <td>-0.0526</td>
+      <td>0.0293</td>
+      <td>0.9488</td>
+      <td>0.8955</td>
+      <td>1.0053</td>
+    </tr>
+  </tbody>
+</table><p>Teste temporal: log loss 1.0737 contra 1.132 da referência. Acurácia 56.27% contra 56.12%. Baixa sensibilidade fatal; não adequado a decisão operacional.</p><p>A tabela identifica associações de cada categoria versus sem vítimas, sem demonstrar causas. Veja coeficientes completos, calibração e sensibilidade no notebook.</p><h2>Reprodução e fontes</h2><p>Scripts coletar.py, analisar.py, integrar_snv.py e publicar_resultados.py; pandas, NumPy, SciPy, Matplotlib e pyshp. SHA-256 dos arquivos no manifesto. Datas, exclusões e testes preservados. A versão do script principal está identificada nos metadados.</p><p><a href="https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf">PRF</a> · <a href="https://www.gov.br/dnit/pt-br/assuntos/atlas-e-mapas/pnv-e-snv">SNV/DNIT</a> · <a href="https://dados.antt.gov.br/">ANTT</a> · <a href="https://servicodados.ibge.gov.br/api/docs/malhas?versao=3">IBGE</a></p></html>

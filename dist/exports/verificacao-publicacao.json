@@ -1,0 +1,67 @@
+{
+  "title": "Observatório de Segurança Rodoviária",
+  "total": "278.103",
+  "tabs": [
+    {
+      "id": "teoria",
+      "active": true,
+      "charts": 0
+    },
+    {
+      "id": "territorio",
+      "active": true,
+      "charts": 1
+    },
+    {
+      "id": "padroes",
+      "active": true,
+      "charts": 3
+    },
+    {
+      "id": "exposicao",
+      "active": true,
+      "charts": 3
+    },
+    {
+      "id": "modelos",
+      "active": true,
+      "charts": 3
+    },
+    {
+      "id": "auditoria",
+      "active": true,
+      "charts": 3
+    },
+    {
+      "id": "metodo",
+      "active": true,
+      "charts": 0
+    },
+    {
+      "id": "laboratorio",
+      "active": true,
+      "charts": 0
+    }
+  ],
+  "checks": {
+    "filterWorking": true,
+    "csvExport": true,
+    "svgExport": true,
+    "exposureFilter": true,
+    "roadTraces": true,
+    "fixedFilters": true,
+    "noMobileOverflow": true,
+    "exports/relatorio-analitico.html": true,
+    "exports/figura-modelo.svg": true,
+    "exports/diagnostico-snv-202604A.csv": true,
+    "exports/protocolo-governanca.html": true,
+    "exports/catalogo-governanca.csv": true,
+    "exports/registro-extensoes.json": true
+  },
+  "filtered": "2024 · MG · 9.306 ocorrências",
+  "tableSearch": "82 intervalos · página 1 de 6",
+  "errors": [],
+  "url": "https://observatorio-seguranca-rodoviaria.vercel.app/",
+  "notebook": "10 células de código executadas integralmente no ambiente local; arquivo público com saídas preservadas",
+  "pipeline": "18 verificações de consistência aprovadas"
+}

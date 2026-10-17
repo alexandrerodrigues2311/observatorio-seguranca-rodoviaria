@@ -4,6 +4,8 @@ Painel e pesquisa reproduzível dos registros PRF 2022–2025, malha SNV 202604A
 
 ## Acesso
 
+- [Painel público na Vercel](https://observatorio-seguranca-rodoviaria.vercel.app/)
+
 - [Notebook no Google Colab](https://colab.research.google.com/github/alexandrerodrigues2311/observatorio-seguranca-rodoviaria/blob/main/notebooks/seguranca_rodoviaria.ipynb)
 - [Originais públicos preservados](https://github.com/alexandrerodrigues2311/observatorio-seguranca-rodoviaria/releases/tag/dados-2026-10-17)
 - Painel: servir `dist` com `python -m http.server 8773 --directory dist` ou abrir `dist/index.html`. As dependências visuais e dados são locais.
